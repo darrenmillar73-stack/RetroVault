@@ -9,7 +9,7 @@ body {
 
 .background {
     background-color: #e94b8c;
-    color: #90c5e9;
+    color: #000000;
     padding: 20px;
     text-align: center;
 }
@@ -22,7 +22,7 @@ body {
     align-content: start;
 
     background-color: #90c5e9;
-    color: #e94b8c;
+    color: #920046;
 
     border: 15px solid #e94b8c;
     padding: 12px;
@@ -39,7 +39,7 @@ body {
 
 .topsection1 {
     background-color: #e94b8c;
-    color: #102a43;
+    color: #001b33;
     padding: 0px;
     text-align: center;
     font-size: 24px;
@@ -72,7 +72,7 @@ body {
 
 .bottomsection {
     background-color: #e94b8c;
-    color: #102a43;
+    color: #001b33;
     padding: 10px;
     text-align: center;
     font-size: 18px;
@@ -183,7 +183,7 @@ select:focus-visible {
 .artwork-panel,
 .synopsis-panel {
     background-color: #90c5e9;
-    color: #e94b8c;
+    color: #920046;
     width: 95%;
     max-width: 600px;
     text-align: center;
