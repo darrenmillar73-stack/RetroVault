@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVault</title>
+    <link rel="stylesheet" type="text/css" href="retrovault.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="page-layout">
+        <div class="cabinet">
+            <div class="topsection1">
+                <h1>Welcome to RetroVault</h1>
+                <!-- <h2>RetroVault</h2> -->
+            </div>
+            <div class="topsection2"></div>
+            <div class="middlesection">
+                <h2>Classic 8 and 16-bit games from the golden age of gaming!</h2>
+                <form id="game-form">
+                    <label for="game-platform">Select Platform:</label>
+                    <select id="game-platform" name="game-platform">
+                        <option value="amiga">Amiga</option>
+                        <option value="atari2600">Atari 2600</option>
+                        <option value="atari5200">Atari 5200</option>
+                        <option value="atari7800">Atari 7800</option>
+                        <option value="atari-st">Atari ST</option>
+                        <option value="c64">Commodore 64</option>
+                        <option value="megadrive">Sega Mega Drive</option>
+                        <option value="snes">Super Nintendo Entertainment System</option>
+                        <option value="zxspectrum">ZX Spectrum</option>
+                    </select>
+                    <label for="game-search">Enter Game Title:</label>
+                    <input type="text" id="game-search" name="game-search" required minlength="2" maxlength="100"
+                        autocomplete="off" aria-describedby="search-help">
+                    <small id="search-help">
+                        Enter at least 2 characters of a game title.
+                    </small>
+                </form>
+
+                <p id="search-status" role="status" aria-live="polite"></p>
+
+                <div id="game-details"></div>
+            </div>
+            <div class="controlpanel">
+                <div class="joystick">
+                    <div class="joystick-shaft"></div>
+                    <div class="joystick-ball"></div>
+                </div>
+
+                <button type="button" class="redbutton" id="redbutton" onclick="searchGame()">
+                    Search
+                </button>
+
+                <button type="button" class="greenbutton" id="greenbutton" onclick="clearGameDetails()">
+                    Clear
+                </button>
+            </div>
+
+            <section id="bottomsection" class="bottomsection" aria-labelledby="gametitle">
+                <h2 id="gametitle">Featured Games</h2>
+
+                <p id="gameplatform">
+                    Check out our collection of classic games!
+                </p>
+
+                <dl id="game-info" class="game-info" hidden>
+                    <div>
+                        <dt>Released:</dt>
+                        <dd id="gameyear"></dd>
+                    </div>
+                    <div>
+                        <dt>Publisher:</dt>
+                        <dd id="gamepublisher"></dd>
+                    </div>
+                    <div>
+                        <dt>Developer:</dt>
+                        <dd id="gamedeveloper"></dd>
+                    </div>
+                    <div>
+                        <dt>Genre:</dt>
+                        <dd id="gamegenre"></dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+        <section class="artwork-panel" id="artwork-panel" hidden>
+            <div id="game-artwork"></div>
+        </section>
+        <section class="synopsis-panel" id="synopsis-panel" hidden>
+            <p id="game-synopsis"></p>
+        </section>
+    </main>
+    <script src="retrovault.js"></script>
+</body>
+
+</html>
